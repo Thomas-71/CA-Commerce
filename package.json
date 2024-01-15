@@ -1,0 +1,30 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "clean": "rm -rf dist/ coverage/",
+    "build": "npm run clean && tsc && vite build && cp -r public/ dist/public && cp -r views/ dist/views",
+    "prod": "NODE_ENV=production node dist/index.mjs",
+    "start": "npm run dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql-client": "^0.3.0",
+    "mysql2": "^3.7.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/mysql": "^2.15.25",
+    "@types/node": "^20.8.9",
+    "mysql": "^2.18.1",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0",
+    "vite-plugin-node": "^3.0.2"
+  }
+}

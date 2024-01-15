@@ -1,0 +1,14 @@
+// .devcontainer/devcontainer.json
+{
+	"name": "Node.js & TypeScript with MySQL",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+	"postCreateCommand": "npm i mysql2",
+
+	"containerEnv": {
+		"DB_HOST": "192.168.1.50",
+		"DB_USER": "commerceUser",
+		"DB_PASSWORD": "1234567890",
+		"DB_PORT": "3306",
+		"DB_NAME": "commerce_db"
+	  }
+}
